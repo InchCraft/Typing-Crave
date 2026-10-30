@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Typing Crave – Free Typing Speed Test</title>
+
+  <meta name="description" content="Typing Crave is a free online typing speed test with instant WPM and accuracy results, fun typing prompts, themes, and optional key sounds. No signup required.">
+
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://typingcrave.netlify.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://typingcrave.netlify.app/">
+  <meta property="og:title" content="Typing Crave – Free Typing Speed Test">
+  <meta property="og:description" content="Test your typing speed and accuracy with Typing Crave. Get instant WPM and accuracy results with fun prompts, themes, and optional key sounds.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Typing Crave – Free Typing Speed Test">
+  <meta name="twitter:description" content="Test your typing speed and accuracy with Typing Crave.">
+
+  <link rel="stylesheet" href="style.css">
+</head><body class="classic">
+  <!-- Top bar -->
+  <header>
+    <img src="assets/logo.png" alt="Typing Crave logo" class="logo"/>
+    <button id="settingsBtn" class="settings-btn" aria-label="Open settings">⚙️</button>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div id="prompt" class="prompt"></div>
+
+    <textarea
+      id="inputBox"
+      placeholder="Start typing here…"
+      spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off"
+    ></textarea>
+
+    <div class="stats">
+      <span>WPM: <b id="wpm">0</b></span>
+      <span>Accuracy: <b id="accuracy">100</b>%</span>
+    </div>
+
+    <button id="newPromptBtn">New Prompt</button>
+
+    <div id="finishedMessage" class="finished-message"></div>
+  </main>
+
+<div class="support">
+ <a
+  href="https://buymeacoffee.com/typingcrave"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="coffee-button"
+>
+  ⌨️ Buy Me a Keyboard
+</a>
+</div>
+
+
+  <!-- Settings drawer -->
+  <aside id="settingsMenu" class="settings-menu" aria-hidden="true">
+    <h2>Settings</h2>
+
+    <div class="set-group">
+      <label for="themeSelect">Theme</label>
+      <select id="themeSelect">
+        <option value="classic" selected>Classic (Gradient)</option>
+        <option value="dark">Dark</option>
+        <option value="light">Light (⚠ Flashbang)</option>
+      </select>
+    </div>
+
+    <div class="set-group">
+      <label class="row">
+        <span>Key sounds</span>
+        <input type="checkbox" id="soundToggle" checked>
+      </label>
+    </div>
+
+    <button id="closeSettings" class="close-btn">Close</button>
+  </aside>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
